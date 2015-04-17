@@ -27,7 +27,7 @@ _start:
 ; poner data si es necesario
 section .data
 
-; por ahora nada aca
+
 section .bss
 placeholder resb 128
 
