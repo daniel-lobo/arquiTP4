@@ -1,0 +1,38 @@
+buscar, registrarse, checkout, proceso de compra, carrito de compras
+================================================
+
+Uno de los formatos que usa Linux es ELF: Executable and Linkable Format
+http://en.wikipedia.org/wiki/Executable_and_Linkable_Format
+.text
+Es la zona de codigo y de todos los elementos que no se modifican.
+El compilador marca esta zona como no modificable.
+Si se intenta modificar, se va a producir un error.
+
+.data
+Tiene datos inicializados que se pueden modificar pero no se pueden ejecutar.
+Si se intenta ejecutar, se puede producir un error.
+
+.bss
+Zona de datos, que no ocupa espacio hasta que el programa sea cargado en memoria.
+"Better Save Space"
+
+
+_start:​
+Da pie a la primera instruccion que se va a ejecutar
+
+Stack:
+Para llamar a las funciones, es necesario el uso de un stack, de esta forma,
+se puede “conocer” la historia de dichas funciones. Ya que cuando se llama a una
+función, se guarda en el stack la dirección de memoria próxima a ejecutar al
+volver de dicha función.
+
+El stack además es una buena zona para declarar variables privadas,
+(automáticas), ya que cuando termina la función que las declaró, el stack debería
+volver al estado en el que fue entregado para no tener ningún problema. Es decir,
+al momento de ejecutar la instrucción ret, el stack debe estar como se recibió.
+
+Si se llena el stack el programa deberia abortar con un error.
+
+==========================
+Para ver otras syscalls, se puede entrar a la página:
+; http://docs.cs.up.ac.za/programming/asm/derick_tut/syscalls.html
